@@ -25,9 +25,9 @@ function writePassword() {
       numbers: "0123456789",
       special: "!@#$%^&*()_+=-`~?><,./;:'\|[]{}"
     };
-    // a letiable to store types with boolean = true
+    // a variable to store types with boolean = true
     let types = "";
-    // If user selects ok on the following prompts, insert type into types letiable
+    // If user selects ok on the following prompts, insert type into types variable
     if (lowerCase) {
       types += characters.lower;
     }
@@ -40,10 +40,10 @@ function writePassword() {
     if (special) {
       types += characters.special;
     }
-    // Empty password letiable to add random characters in to
+    // Empty password variable to add random characters in to
     let password = "";
     for (let i = 0; i < size; i++) {
-      // Creates a temporary letiable to store the selected characters
+      // Creates a temporary variable to store the selected characters
       let generate = Math.floor(Math.random() * types.length);
       password += types[generate];
     }
