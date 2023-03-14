@@ -40,6 +40,10 @@ function writePassword() {
     if (special) {
       types += characters.special;
     }
+    if (types === "") { // if user doesn't select any choices , throw an error
+      confirm("You did not choose any of the criteria, please try again.")
+      return;
+    }
     // Empty password variable to add random characters in to
     let password = "";
     for (let i = 0; i < size; i++) {
